@@ -135,8 +135,8 @@ class BingoBoard(tk.Tk):
 
 def main():
     """Create the game's board and run its main loop."""
-    game = TicTacToeGame()
-    board = TicTacToeBoard(game)
+    game = BingoGame()
+    board = BingoBoard(game)
     board.mainloop()
 
 if __name__ == "__main__":
