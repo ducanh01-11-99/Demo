@@ -1,4 +1,4 @@
-"""A tic-tac-toe game built with Python and Tkinter."""
+"""A Bingo game built with Python and Tkinter."""
 import tkinter as tk
 from itertools import cycle
 from tkinter import font
@@ -24,7 +24,7 @@ DEFAULT_PLAYERS = (
     Player(label="Enemy", color="green"),
 )
 
-class TicTacToeGame:
+class BingoGame:
     def __init__(self, players=DEFAULT_PLAYERS, board_size=BOARD_SIZE):
         self._players = cycle(players)
         self.board_size = board_size
@@ -48,7 +48,7 @@ class TicTacToeGame:
         move_was_not_played = self._current_moves[row][col].label == ""
         return move_was_not_played
 
-class TicTacToeBoard(tk.Tk):
+class BingoBoard(tk.Tk):
     def __init__(self, game):
         super().__init__()
         self.title("Tic-Tac-Toe Game")
